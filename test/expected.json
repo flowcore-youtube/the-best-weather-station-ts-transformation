@@ -1,24 +1,32 @@
 [
   {
     "input": {
-      "hello": "world",
-      "bar": "baz"
+      "temp_c": "-19",
+      "wind_speed_mps": "10",
+      "wind_dir": "west"
     },
     "output": {
       "eventid": ":uuid:",
       "validtime": ":date:",
-      "hello": "world",
-      "bar": "baz"
+      "temp_c": "-19",
+      "wind_speed_mps": "10",
+      "wind_dir": "west",
+      "distance_from_optimal_heating": 41
     }
   },
   {
     "input": {
-      "foo": "bar"
+      "temp_c": "2",
+      "wind_speed_mps": "10",
+      "wind_dir": "east"
     },
     "output": {
       "eventid": ":uuid:",
       "validtime": ":date:",
-      "foo": "bar"
+      "temp_c": "2",
+      "wind_speed_mps": "10",
+      "wind_dir": "east",
+      "distance_from_optimal_heating": 20
     }
   }
 ]
