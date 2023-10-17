@@ -10,11 +10,23 @@ interface Input<T = any> {
   payload: T;
 }
 
-export default async function (input: Input) {
-  console.info(`Received event ${input.eventId}, with payload ${JSON.stringify(input.payload)} and valid time ${input.validTime}`);
+type Payload = {
+  temp_c :string;
+  wind_speed_mps: string;
+  wind_dir: string;
+}
+
+const OPTIMAL_HEATING_IN_TEMP = 22.0;
+
+export default async function (input: Input<Payload>) {
+
+  const tempInNumber = parseFloat(input.payload.temp_c);
+  const distanceBetweenTemps = OPTIMAL_HEATING_IN_TEMP - tempInNumber;
+
   return {
     eventid: input.eventId,
     validtime: input.validTime,
     ...input.payload,
+    distance_from_optimal_heating: distanceBetweenTemps
   };
 }
