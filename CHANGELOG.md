@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 (2023-10-17)
+
+
+### Features
+
+* added optimal heating distance ([1470e56](https://github.com/flowcore-youtube/the-best-weather-station-ts-transformation/commit/1470e564e0afcaa42272c5748de6bd76aca3e4db))
+
 ## [1.3.1](https://github.com/flowcore-io/nodejs-typescript-transformer-example/compare/v1.3.0...v1.3.1) (2023-10-04)
 
 
